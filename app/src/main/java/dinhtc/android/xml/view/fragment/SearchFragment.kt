@@ -6,7 +6,7 @@ import dinhtc.android.xml.databinding.FragmentSearchBinding
 
 class SearchFragment : BaseFragment<FragmentSearchBinding>() {
 
-    override val layoutResourceId: Int?
+    override val layoutResourceId: Int
         get() = R.layout.fragment_search
 
     override fun viewCreatedFragment() {

@@ -14,7 +14,7 @@ class CartBagFragment : BaseFragment<FragmentCartBagBinding>() {
 
     private lateinit var cartBagAdapter : CartBagAdapter
 
-    override val layoutResourceId: Int?
+    override val layoutResourceId: Int
         get() = R.layout.fragment_cart_bag
 
     override fun viewCreatedFragment() {

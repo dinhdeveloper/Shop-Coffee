@@ -6,7 +6,7 @@ import dinhtc.android.xml.databinding.FragmentHearBinding
 
 class HearFragment : BaseFragment<FragmentHearBinding>() {
 
-    override val layoutResourceId: Int?
+    override val layoutResourceId: Int
         get() = R.layout.fragment_hear
 
     override fun viewCreatedFragment() {

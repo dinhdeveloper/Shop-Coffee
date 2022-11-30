@@ -28,7 +28,7 @@ class ProductDetailFragment : BaseFragment<FragmentProductDetailBinding>() {
 
     private val productViewModel by viewModels<ProductViewModel>()
 
-    override val layoutResourceId: Int?
+    override val layoutResourceId: Int
         get() = R.layout.fragment_product_detail
 
     override fun viewCreatedFragment() {

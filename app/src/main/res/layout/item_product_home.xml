@@ -20,7 +20,7 @@
         <RelativeLayout
             android:id="@+id/itemProduct"
             android:layout_width="160dp"
-            android:layout_height="240dp"
+            android:layout_height="220dp"
             android:background="@color/colorTransparent"
             android:orientation="vertical"
             android:padding="10dp">
@@ -87,7 +87,7 @@
         <RelativeLayout
             android:id="@+id/layoutProgress"
             android:layout_width="140dp"
-            android:layout_height="220dp"
+            android:layout_height="200dp"
             android:layout_margin="10dp"
             android:background="@drawable/bg_progress_item">
 

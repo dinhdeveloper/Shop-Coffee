@@ -16,9 +16,9 @@ abstract class BaseFragment<_ViewDataBinding : ViewDataBinding>() : Fragment() {
     private lateinit var mainActivity: MainActivity
     protected open var bottomNavigationViewVisibility = View.VISIBLE
     protected open var toolbarViewVisibility = View.GONE
-    abstract val layoutResourceId: Int?
+    abstract val layoutResourceId: Int
     lateinit var _binding: _ViewDataBinding
-    private val binding get() = _binding!!
+    private val binding get() = _binding
 
 
 
@@ -31,7 +31,7 @@ abstract class BaseFragment<_ViewDataBinding : ViewDataBinding>() : Fragment() {
     ): View {
         _binding = DataBindingUtil.inflate(
             inflater,
-            layoutResourceId!!,
+            layoutResourceId,
             container,
             false
         )

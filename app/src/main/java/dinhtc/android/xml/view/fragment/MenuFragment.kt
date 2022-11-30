@@ -6,7 +6,7 @@ import dinhtc.android.xml.databinding.FragmentMenuBinding
 
 class MenuFragment  : BaseFragment<FragmentMenuBinding>() {
 
-    override val layoutResourceId: Int?
+    override val layoutResourceId: Int
         get() = R.layout.fragment_menu
 
     override fun viewCreatedFragment() {

@@ -24,7 +24,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     private lateinit var binding: ActivityMainBinding
 
 
-    override val layoutResourceId: Int?
+    override val layoutResourceId: Int
         get() = R.layout.activity_main
 
     override fun onCreateActivity() {

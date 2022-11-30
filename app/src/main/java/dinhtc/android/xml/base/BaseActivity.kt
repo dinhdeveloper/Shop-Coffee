@@ -17,13 +17,13 @@ import java.util.ArrayList
 
 abstract class BaseActivity<_ViewDataBinding : ViewDataBinding> : AppCompatActivity() {
 
-    abstract val layoutResourceId: Int?
+    abstract val layoutResourceId: Int
     protected var viewDataBinding: ViewDataBinding? = null
     abstract fun onCreateActivity()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        layoutResourceId?.let { setContentView(it) }
+        setContentView(layoutResourceId)
         onCreateActivity()
     }
 
