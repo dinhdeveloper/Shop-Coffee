@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemBagCart"
+    android:layout_width="30dp"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@color/colorMain"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/itemCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:backgroundTint="#4885ff"
+        android:src="@drawable/ic_shopping_bag" />
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/circle_cart"
+        android:backgroundTint="#FB0505"
+        android:gravity="center"
+        android:text="10"
+        android:textColor="#fff"
+        android:textSize="6sp"
+        android:textStyle="bold" />
+</RelativeLayout>

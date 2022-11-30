@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/tutorial_guide_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/tutorial_guide_line"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_ellipse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/layoutBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:padding="10dp"
+            android:weightSum="3"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:fontFamily="@font/avenir_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="Latte Cafe" />
+
+                <TextView
+                    android:fontFamily="@font/avenir_lightoblique"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:text="Số lượng: 6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginStart="10dp"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Pay Now"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_item_order_topping"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/layoutBottom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcListCart"
+                tools:listitem="@layout/item_list_cart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

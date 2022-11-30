@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Coffee Shop</string>
+
+
+
+    <string name="price_sale"><strike>120.000 VNĐ</strike></string>
+    <string name="detail_long">Cà phê là câu chuyện của sự kết nối, là phạm trù nghệ thuật riêng của khoa học và cũng xứng đáng là một nhân tố kinh tế trong thời đại mới. Như vậy, người làm cà phê, dù ở bất kì vị trí nào, cũng là một nghệ nhân và là một nhà khoa học đáng được trân trọng. Từ người nông dân, nhà rang, Barista đến các nhà quản lý, các nhà thương mại… Người trồng kẻ tưới, giá trị như nhau, cùng đóng góp cho sự vẹn tròn của tương lai cà phê Việt.</string>
+    <string name="detail_long_description">Mỗi người có một mục đích khác nhau khi đi cafe, chính vì vậy mà phải tùy thuộc vào phong cách của tiệm để viết PR cho tiệm cafe đến đúng đối tượng người dùng. Còn nói là khó bởi vì, làm sao để mình trở nên khác biệt, làm sao để mạnh hơn so với đối thủ cạnh tranh, khi mà khắp nơi giờ đây đều thấy những tiệm trà bánh cafe’ trang hoàng đẹp mắt. Đó là một thách thức lớn với những người làm Marketing, PR hay Quảng cáo cho quán cafe’.</string>
+</resources>

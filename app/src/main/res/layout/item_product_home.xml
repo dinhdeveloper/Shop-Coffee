@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="dinhtc.android.xml.model.ProductModel" />
+
+        <variable
+            name="productModel"
+            type="ProductModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/itemProduct"
+            android:layout_width="160dp"
+            android:layout_height="240dp"
+            android:background="@color/colorTransparent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:background="@color/colorTransparent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_item_product_home">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="2"
+                            android:text="@{productModel.productName}"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            tools:text="Latte Cafe Latte Cafe Latte Cafe" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/avenir_lightoblique"
+                            android:maxLines="1"
+                            android:textColor="@color/colorGreen"
+                            android:textSize="12sp"
+                            app:formatMoney="@{productModel.priceSale}"
+                            tools:text="100.000 VNĐ" />
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageview1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="80dp"
+                android:elevation="10dp"
+                android:src="@drawable/image_3"
+                app:loadImageDrawble="@{productModel.productImage}"
+                tools:src="@drawable/image_3" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutProgress"
+            android:layout_width="140dp"
+            android:layout_height="220dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_progress_item">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleInverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/multi_color_progress"
+                android:progress="80" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</layout>

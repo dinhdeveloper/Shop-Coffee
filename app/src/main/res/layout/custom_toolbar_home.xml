@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorMain"
+    android:layout_gravity="end"
+    android:gravity="end|center"
+    android:id="@+id/layoutCart"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:src="@drawable/ic_search_while"
+        android:paddingVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:paddingVertical="10dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/item_cart"/>
+
+
+</LinearLayout>

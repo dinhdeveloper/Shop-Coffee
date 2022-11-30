@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="dinhtc.android.xml.model.ProductModel"/>
+        <variable
+            name="productModel"
+            type="ProductModel" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/productItem"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:layout_width="140dp"
+                app:cardCornerRadius="15dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tra_sua"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:text="@{productModel.productName}"
+                    android:fontFamily="@font/avenir_black"
+                    android:paddingVertical="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:text="Latte Cafe" />
+
+                <TextView
+                    app:formatMoneyStrike="@{productModel.priceSale}"
+                    android:fontFamily="@font/avenir_lightoblique"
+                    android:paddingVertical="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    tools:text="@string/price_sale" />
+
+                <TextView
+                    app:formatMoney="@{productModel.priceSale}"
+                    android:fontFamily="@font/avenir_medium"
+                    android:paddingVertical="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    tools:text="100.000 VNĐ" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutAdd"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/bg_item_today_home"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+                <ImageView
+                    android:padding="15dp"
+                    android:src="@drawable/ic_plus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

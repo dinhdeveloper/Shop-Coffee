@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="dinhtc.android.xml.model.ProductModel" />
+
+        <variable
+            name="productModel"
+            type="ProductModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/itemProduct"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@color/colorTransparent"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:background="@color/colorTransparent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_item_cart">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/avenir_medium"
+                            android:maxLines="1"
+                            android:text="@{productModel.productName}"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="16sp"
+                            tools:text="Latte Cafe" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="13sp"
+                            app:formatMoney="@{productModel.priceSale}"
+                            tools:text="100.000 VNĐ" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center|bottom"
+                        android:background="@color/main3"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_plus" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageview1"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="60dp"
+            android:elevation="10dp"
+            app:loadImageDrawble="@{productModel.productImage}"
+            tools:src="@drawable/image_3" />
+    </RelativeLayout>
+
+</layout>

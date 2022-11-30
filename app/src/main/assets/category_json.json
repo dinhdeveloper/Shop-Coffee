@@ -1,0 +1,30 @@
+[
+  {
+    "categoryId": 1,
+    "categoryName": "CÀ PHÊ PHA PHIN"
+  },
+  {
+    "categoryId": 2,
+    "categoryName": "CÀ PHÊ ESPRESSO"
+  },
+  {
+    "categoryId": 3,
+    "categoryName": "TRÀ"
+  },
+  {
+    "categoryId": 4,
+    "categoryName": "FREEZE"
+  },
+  {
+    "categoryId": 5,
+    "categoryName": "BÁNH MÌ"
+  },
+  {
+    "categoryId": 6,
+    "categoryName": "BÁNH NGỌT"
+  },
+  {
+    "categoryId": 7,
+    "categoryName": "THỨC UỐNG KHÁC"
+  }
+]

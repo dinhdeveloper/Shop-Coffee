@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="product"
+            type="dinhtc.android.xml.model.ProductModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/layoutName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/avenir_black"
+                android:maxLines="1"
+                android:paddingVertical="2dp"
+                tools:text="Latte Cafe Latte Cafe"
+                android:text="@{product.productName}"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_tim_open" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutVote"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutName">
+
+            <include layout="@layout/layout_star" />
+
+            <TextView
+                tools:text="5.0 "
+                android:text="@{product.rate}"
+                android:paddingLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                app:countPreview="@{product.countPreview}"
+                tools:text="(70 review)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutDescription"
+            app:layout_constraintTop_toBottomOf="@+id/layoutVote"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvDescription"
+                android:text="@{product.productDescription}"
+                android:layout_weight="1"
+                android:maxLines="6"
+                android:ellipsize="end"
+                tools:text="@string/detail_long"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAddExtra"
+            android:layout_marginTop="10dp"
+            android:alpha="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/avenir_black"
+            android:maxLines="1"
+            android:paddingVertical="2dp"
+            android:text="Add Extra"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcAddExtra"
+            android:paddingHorizontal="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddExtra"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_add_extra"
+            tools:orientation="horizontal" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

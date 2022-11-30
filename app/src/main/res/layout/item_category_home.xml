@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="dinhtc.android.xml.model.CategoryModel"/>
+        <variable
+            name="categoryModel"
+            type="CategoryModel" />
+
+        <variable
+            name="itemSelectedColor"
+            type="Integer" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/itemCategory"
+        android:layout_width="wrap_content"
+        android:background="@color/colorMain"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:text="@{categoryModel.categoryName}"
+            android:textColor="@{itemSelectedColor}"
+            android:textSize="14sp"
+            android:fontFamily="@font/avenir_medium"
+            tools:text="Đen đá"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="dinhtc.android.xml.model.ProductModel" />
+
+        <variable
+            name="productModel"
+            type="ProductModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemProduct"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/colorTransparent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <RelativeLayout
+            app:layout_constraintStart_toStartOf="@+id/guide_line"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginVertical="20dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorTransparent">
+
+            <LinearLayout
+                android:paddingStart="20dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_item_product_home">
+
+                <TextView
+                    android:paddingVertical="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/avenir_black"
+                    android:text="@{productModel.productName}"
+                    tools:text="Latte Cafe" />
+
+                <TextView
+                    android:text="@{productModel.priceSale}"
+                    android:paddingVertical="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    tools:text="100.000 VNĐ" />
+                <LinearLayout
+                    android:layout_gravity="start"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="5dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_plus_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorWhite"
+                        android:fontFamily="@font/avenir_medium"
+                        android:paddingVertical="5dp"
+                        android:paddingHorizontal="15dp"
+                        android:text="10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="5dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_minus_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageview1"
+            android:scaleType="centerInside"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/guide_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            android:src="@drawable/removebg_preview"
+            tools:src="@drawable/removebg_preview" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:weightSum="3"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_weight="1"
+            android:paddingVertical="5dp"
+            android:paddingLeft="5dp"
+            android:src="@drawable/ic_plus_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/avenir_medium"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="5dp"
+            android:text="10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_weight="1"
+            android:paddingVertical="5dp"
+            android:paddingLeft="5dp"
+            android:src="@drawable/ic_minus_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginStart="10dp"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Pay Now"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_item_order_topping"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+</LinearLayout>

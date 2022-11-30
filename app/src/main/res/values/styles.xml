@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
+
+    <style name="showLoading" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:background">@drawable/multi_color_progress</item>
+    </style>
+
+
+    <style name="MyRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/my_radio_btn</item>
+    </style>
+
+    <style name="MyRadioButtonCardDisable" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/my_radio_btn_disable</item>
+    </style>
+</resources>
